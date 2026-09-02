@@ -1,4 +1,6 @@
 
+
+```markdown
 # Cloud 기반 FoD(구독형) 서비스 - vECU 기능 추가를 위한 OTA 프로세스 구현
 
 > **현대모비스 x 멋쟁이사자처럼 모비우스 부트캠프 1기 PBL 3-2팀 (Soda CAN)**  
@@ -25,6 +27,7 @@ AWS 클라우드 인프라와 Vector CANoe 가상 차량 환경을 실시간으�
 
 ## 3. 시스템 아키텍처 (Car-to-Cloud)
 
+```text
 +-----------------------------------------------------------------------------------+
 |                        Vector CANoe 가상 차량 환경 (HMI & vECU)                   |
 |                                                                                   |
@@ -85,6 +88,7 @@ AWS 클라우드 인프라와 Vector CANoe 가상 차량 환경을 실시간으�
 
 본 프로젝트는 요구사항 도출부터 단위 테스트, 시나리오 테스트까지 전 과정을 검증하였습니다.
 
+```text
 [요구사항 분석] REQ_001 ~ REQ_021 ====================> [인수 테스트] 데모 시연 및 E2E 시나리오 (Pass)
       \                                                       /
    [시스템 설계] C2C 아키텍처, DBC 사양 ============> [시스템 테스트] 안전 조건(속도=0), 에러 처리 (Pass)
@@ -113,6 +117,7 @@ AWS 클라우드 인프라와 Vector CANoe 가상 차량 환경을 실시간으�
 
 ## 6. 리포지토리 구성
 
+```text
 ├── docs/                               # 프로젝트 산출물 문서
 │   ├── PBL_Presentation.pdf            # 최종 발표 자료
 │   ├── PBL_Poster.pdf                  # 포스터 세션 자료
@@ -143,5 +148,6 @@ AWS 클라우드 인프라와 Vector CANoe 가상 차량 환경을 실시간으�
 * **Middleware & Backend:** Python 3.x, `python-can`, `cx_Oracle`
 * **Database & Cloud:** Oracle Database 21c (XE), Docker, AWS EC2
 
+```
 
 ```
