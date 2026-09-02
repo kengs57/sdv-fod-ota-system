@@ -20,6 +20,14 @@ AWS 클라우드 인프라와 Vector CANoe 가상 차량 환경을 실시간으�
 * **동적 필터링 & 페이징:** `car_features`(판매 기능)와 `order_history`(사용자 구매 이력)를 연동 검증하여, 이미 소유한 기능을 제외한 미구매 항목만 패널(BUY 1~5)에 페이징 표출
 * **트랜잭션 및 피드백:** 기능 구매 시 클라우드 DB 트랜잭션(INSERT) 생성 후 패널에 2초간 `Order Confirmed` 팝업 표출 및 CAN 버스로 활성화 신호 브로드캐스팅
 
+* 
+
+https://github.com/user-attachments/assets/488ff50d-ad6a-43c9-bce0-289a9f55b3b0
+
+
+<img width="1928" height="1028" alt="스크린샷 2026-03-20 213355" src="https://github.com/user-attachments/assets/727c449c-64ab-4f42-affb-d9db15f0b35f" />
+
+
 ---
 
 ## 3. 시스템 아키텍처
