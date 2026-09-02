@@ -116,24 +116,24 @@ v
 ## 6. 리포지토리 구성
 
 ```text
-├── docs/                               # 프로젝트 엔지니어링 산출물
-│   ├── PBL_Presentation.pdf            # 최종 발표 자료 (마스킹 완료)
-│   ├── PBL_Poster.pdf                  # 포스터 세션 발표 자료
-│   └── Engineering_Artifacts.xlsx      # V-Model 산출물 통합본 (요구사항, DBC, 테스트 결과)
-├── database/                           # 데이터베이스 스크립트
-│   └── TABLE.sql                       # Oracle DB DDL 및 초기 데이터 생성 쿼리
-├── middleware/                         # 통신 미들웨어
-│   ├── pc1_middleware.py               # CANoe-DB 양방향 통신 미들웨어 스크립트
-│   └── config.py.example               # 환경 변수 접속 템플릿
-└── simulation/                         # Vector CANoe 시뮬레이션
-    ├── 3_2team_PC1.dbc                 # PC1 CAN 통신 데이터베이스
-    ├── 3_2team_PC2.dbc                 # PC2 CAN 통신 데이터베이스
-    ├── 3_2team_PC3.dbc                 # PC3 CAN 통신 데이터베이스
+├── docs/                                     # 프로젝트 엔지니어링 산출물
+│   ├── 3-2팀_Cloud 기반 FoD(구독형) 서비스_PPT # 최종 발표 자료 (구글드라이브 링크로 대체)
+│   ├── 모비우스 PBL 포스터세션_3-2팀_최종.pptx # 포스터 세션 발표 자료
+│   └── 모비우스_PBL_3-2팀_산출물.xlsx         # V-Model 산출물 통합본 (요구사항, DBC, 테스트 결과)
+├── database/                                 # 데이터베이스 스크립트
+│   └── TABLE.sql                             # Oracle DB DDL 및 초기 데이터 생성 쿼리
+├── middleware/                               # 통신 미들웨어
+│   ├── pc1_middleware.py                     # CANoe-DB 양방향 통신 미들웨어 스크립트
+│   └── config.py.example                     # 환경 변수 접속 템플릿
+└── simulation/                               # Vector CANoe 시뮬레이션
+    ├── 3_2team_PC1.dbc                       # PC1 CAN 통신 데이터베이스
+    ├── 3_2team_PC2.dbc                       # PC2 CAN 통신 데이터베이스
+    ├── 3_2team_PC3.dbc                       # PC3 CAN 통신 데이터베이스
     └── SodaCAN_PC1/
-        ├── PC1_CAPL_03.can             # PC1 노드 구동 CAPL 소스 코드
-        ├── PC1_Panel1.xvp              # Panel Designer UI 파일
-        ├── SodaCAN_PC1.cfg             # CANoe 프로젝트 설정 파일
-        └── SodaCAN_PC1.stcfg           # 시스템 변수(System Variables) 설정 파일
+        ├── PC1_CAPL_03.can                   # PC1 노드 구동 CAPL 소스 코드
+        ├── PC1_Panel1.xvp                    # Panel Designer UI 파일
+        ├── SodaCAN_PC1.cfg                   # CANoe 프로젝트 설정 파일
+        └── SodaCAN_PC1.stcfg                 # 시스템 변수(System Variables) 설정 파일
 ```
 
 7. 기술 스택 (Tech Stack)
