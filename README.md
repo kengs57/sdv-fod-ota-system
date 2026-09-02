@@ -23,6 +23,7 @@ AWS 클라우드 인프라와 Vector CANoe 가상 차량 환경을 실시간으�
 ---
 
 ## 3. 시스템 아키텍처
+```text
 +-----------------------------------------------------------------------------------+
 |                        Vector CANoe 가상 차량 환경 (HMI & vECU)                   |
 |                                                                                   |
@@ -48,6 +49,7 @@ v
 |                        AWS Docker 기반 Oracle Cloud Database                      |
 |  - 다중 세션(PC1~PC3) 동시성 보장 및 데드락(Deadlock) 방지 트랜잭션 제어          |
 +-----------------------------------------------------------------------------------+
+```
 
 ### 데이터베이스 ERD (5개 핵심 엔티티)
 
@@ -124,6 +126,8 @@ v
         ├── PC1_Panel1.xvp              # Panel Designer UI 파일
         ├── SodaCAN_PC1.cfg             # CANoe 프로젝트 설정 파일
         └── SodaCAN_PC1.stcfg           # 시스템 변수(System Variables) 설정 파일
+```
+
 7. 기술 스택 (Tech Stack)
 Vehicle Simulation: Vector CANoe, Panel Designer, CANdb++, CAPL
 
