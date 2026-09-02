@@ -1,0 +1,90 @@
+﻿/*@!Encoding:65001*/
+includes
+{
+}
+
+variables
+{
+  msTimer tPopupOff; // 팝업을 2초 뒤에 끄기 위한 타이머
+}
+
+/* --- [1. 이벤트 핸들러: 팝업 제어] --- */
+
+on sysvar FoD_UI::PopupVisible
+{
+  // 숫자인 PopupVisible은 @this를 사용해도 무방합니다.
+  if(@this == 1) 
+  {
+    // [중요 수정] 문자열 변수는 @ 대신 함수를 사용해야 합니다.
+    sysSetVariableString(sysvar::FoD_UI::PopupMsg, "Order Confirmed");
+    
+    // 2초 타이머 시작
+    setTimer(tPopupOff, 2000);
+  }
+}
+
+on timer tPopupOff
+{
+  // [중요 수정] 공백으로 지울 때도 함수를 사용합니다.
+  sysSetVariableString(sysvar::FoD_UI::PopupMsg, "");
+  
+  // 숫자인 PopupVisible은 @로 0을 대입할 수 있습니다.
+  @FoD_UI::PopupVisible = 0;
+}
+
+/* --- [2. 이벤트 핸들러: 버튼 및 갱신 감시] --- */
+
+on sysvar FoD_System::Request_Update 
+{
+  if(@this == 1) 
+  { 
+    write("CAPL: 리스트 갱신 요청 감지");
+  }
+}
+
+// 백틱(`) 기호는 변수 이름에서 반드시 제거되어야 합니다.
+on sysvar FoD_UI::`PageUP
+{
+  if(@this == 1)
+  {
+    write("CAPL: Page UP 클릭");
+  }
+}
+
+on sysvar FoD_UI::`PageDown
+{
+  if(@this == 1) 
+  {
+    write("CAPL: Page Down 클릭");
+  }
+}
+
+on sysvar FoD_UI::BuyBtn_1
+{
+  if(@this == 1)
+  {
+    write("CAPL: 1번 버튼 구매 프로세스 시작...");
+  }
+}
+
+/* --- [차량 선택 버튼 핸들러] --- */
+
+// [차량 A: GV80]
+on sysvar FoD_UI::Select_VIN_A
+{
+  if(@this == 1)
+  {
+    sysSetVariableString(sysvar::FoD_System::Current_VIN, "KMHJM511KP123456");
+    write("CAPL: [GV80] Selected - VIN Updated");
+  }
+}
+
+// [차량 B: CASPER]
+on sysvar FoD_UI::Select_VIN_B
+{
+  if(@this == 1)
+  {
+    sysSetVariableString(sysvar::FoD_System::Current_VIN, "KMHRA511SR123456");
+    write("CAPL: [CASPER] Selected - VIN Updated");
+  }
+}

@@ -1,0 +1,89 @@
+VERSION "DNNBNNNYNNNNNNNNNNNNNNNNNNYYYNNNNNNNNNNNNN/4/%%%/4/'%**4NNN///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Navigation TCU Gateway VUM
+
+
+BO_ 768 msg_tcu: 2 TCU
+ SG_ nav_version_update : 15|8@0+ (1,0) [0|255] ""  VUM
+ SG_ nav_version_list : 7|8@0+ (1,0) [0|255] ""  VUM
+
+BO_ 256 msg_nav: 1 Navigation
+ SG_ nav_update_check : 6|1@0+ (1,0) [0|1] ""  VUM
+ SG_ nav_version_check : 7|1@0+ (1,0) [0|1] ""  VUM
+
+BO_ 512 msg_vum: 2 VUM
+ SG_ nav_update_data : 15|8@0+ (1,0) [0|255] ""  Navigation
+ SG_ nav_update_rcmd : 5|1@0+ (1,0) [0|1] ""  Navigation
+ SG_ nav_version_update_req : 6|1@0+ (1,0) [0|1] ""  TCU
+ SG_ nav_version_list_req : 7|1@0+ (1,0) [0|1] ""  TCU
+
+
+
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BU_  "ILUsed" ENUM  "Yes","No";
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 100000000000;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 999999;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 1 1000;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 2 50000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive";
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 2 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 2;
+BA_DEF_DEF_  "GenMsgSendType" "not_used";
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 100;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "CANoeILNLVector.dll";
+BA_ "GenSigSendType" SG_ 768 nav_version_update 3;
+BA_ "GenSigSendType" SG_ 768 nav_version_list 3;
+BA_ "GenSigSendType" SG_ 256 nav_update_check 3;
+BA_ "GenSigSendType" SG_ 256 nav_version_check 3;
+BA_ "GenSigSendType" SG_ 512 nav_update_data 3;
+BA_ "GenSigSendType" SG_ 512 nav_update_rcmd 3;
+BA_ "GenSigSendType" SG_ 512 nav_version_update_req 3;
+BA_ "GenSigSendType" SG_ 512 nav_version_list_req 3;
+
