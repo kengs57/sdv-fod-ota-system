@@ -136,11 +136,11 @@ v
         └── SodaCAN_PC1.stcfg                 # 시스템 변수(System Variables) 설정 파일
 ```
 
-7. 기술 스택 (Tech Stack)
-Vehicle Simulation: Vector CANoe, Panel Designer, CANdb++, CAPL
+## 7. 기술 스택 (Tech Stack)
+  * Vehicle Simulation: Vector CANoe, Panel Designer, CANdb++, CAPL
 
-Protocols: CAN, CAN FD, UDS/DoIP (Concept)
+  * Protocols: CAN, CAN FD, UDS/DoIP (Concept)
 
-Middleware & Backend: Python 3.x, python-can, cx_Oracle
+  * Middleware & Backend: Python 3.x, python-can, cx_Oracle
 
-Database & Cloud: Oracle Database 21c (XE), Docker, AWS EC2
+  * Database & Cloud: Oracle Database 21c (XE), Docker, AWS EC2
